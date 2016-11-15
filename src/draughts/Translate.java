@@ -1,16 +1,20 @@
 package draughts;
 
+import signals.*;
 import processing.core.PApplet;
+import processing.core.PVector;
 
 public class Translate implements Draught {
-  float x;
-  float y;
+  Signal<PVector> position;
   public Translate(float x, float y) {
-    this.x = x;
-    this.y = y;
+    this(new Constant<PVector>(new PVector(x, y)));
+  }
+  public Translate(Signal<PVector> position) {
+    this.position = position;
   }
   public void draw(PApplet sketch) {
-    sketch.translate(x, y);
+    PVector pos = position.current();
+    sketch.translate(pos.x, pos.y);
   }
 }
 
