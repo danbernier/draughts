@@ -1,13 +1,12 @@
 package signals;
 
-public class HiPass implements Signal<Float> {
-  private Signal<Float> src;
+public class HiPass extends Filter<Float> {
   private float threshold;
   public HiPass(float threshold, Signal<Float> src) {
-    this.src = src;
+    super(src);
     this.threshold = threshold;
   }
-  public Float current() {
-    return Math.max(threshold, src.current());
+  public Float filter(Float value) {
+    return Math.max(threshold, value);
   }
 }

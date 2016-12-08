@@ -1,13 +1,12 @@
 package signals;
 
-public class Amp implements Signal<Float> {
-  private Signal<Float> src;
+public class Amp extends Filter {
   private float amount;
   public Amp(float amount, Signal<Float> src) {
-    this.src = src;
+    super(src);
     this.amount = amount;
   }
-  public Float current() {
-    return src.current() * amount;
+  public Float filter(Float value) {
+    return value * amount;
   }
 }

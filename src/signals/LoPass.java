@@ -1,13 +1,12 @@
 package signals;
 
-public class LoPass implements Signal<Float> {
-  private Signal<Float> src;
+public class LoPass extends Filter<Float> {
   private float threshold;
   public LoPass(float threshold, Signal<Float> src) {
-    this.src = src;
+    super(src);
     this.threshold = threshold;
   }
-  public Float current() {
-    return Math.min(threshold, src.current());
+  public Float filter(Float val) {
+    return Math.min(threshold, val);
   }
 }
