@@ -9,6 +9,9 @@ public class Translate implements Draught {
   public Translate(float x, float y) {
     this(new Constant<PVector>(new PVector(x, y)));
   }
+  public Translate(Signal<Float> x, Signal<Float> y) {
+    this(new PVectorSignal(x, y));
+  }
   public Translate(Signal<PVector> position) {
     this.position = position;
   }
