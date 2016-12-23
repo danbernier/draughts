@@ -1,6 +1,6 @@
 package signals;
 
-public class Amp extends Filter {
+public class Amp extends Filter<Float> {
   private float amount;
   public Amp(float amount, Signal<Float> src) {
     super(src);
