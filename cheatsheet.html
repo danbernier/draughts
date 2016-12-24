@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <title>Cheatsheet: Draughts</title>
+    <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    footer, div#main {
+      margin: 0px;
+      padding: 20px 200px;
+    }
+
+    body {
+      color: #333;
+    }
+
+    * { font-size: 18pt; }
+    h3 { font-size: 21pt; }
+    h2 { font-size: 24pt; }
+    h1 { font-size: 30pt; }
+    footer {
+      background-color: #333;
+      color: #888;
+    }
+    </style>
+  </head>
+  <body>
+    <div id='main'>
+      <h1>Draughts</h1>
+
+      <p>A cheatsheet. <a href="https://github.com/danbernier/draughts">Get all the details.</a></p>
+
+      
+        <h2>Chain</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Chain(Draught... commands)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>Circle</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Circle(int n, Draught command)</code></p>
+</li>
+        
+            <li><p><code>new Circle(int n, float rad, float phase, Draught dc)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>DrawRect</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new DrawRect(Signal&lt;Float&gt; w, Signal&lt;Float&gt; h)</code></p>
+</li>
+        
+            <li><p><code>new DrawRect(float w, float h)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>DrawText</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new DrawText(String text)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>EquilateralTriangle</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new EquilateralTriangle(Signal&lt;Float&gt; baseWidth)</code></p>
+</li>
+        
+            <li><p><code>new EquilateralTriangle(float baseWidth)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>HexGrid</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new HexGrid(float gw, float gh, float s, Draught dc)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>LineUp</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new LineUp(Signal&lt;Float&gt; l)</code></p>
+</li>
+        
+            <li><p><code>new LineUp(float l)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>Maybe</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Maybe(float p, Draught dc)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>PushMatrix</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new PushMatrix(Draught... commands)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>Repeat</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Repeat(int times, Draught... commands)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>Rotate</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Rotate(Signal&lt;Float&gt; theta)</code></p>
+</li>
+        
+            <li><p><code>new Rotate(float theta)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>Scale</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Scale(float amount)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>SineWave</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new SineWave(int n, Draught command)</code></p>
+</li>
+        
+            <li><p><code>new SineWave(int n, float amp, float phase, float w, Draught dc)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>Translate</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Translate(Signal&lt;Float&gt; x, Signal&lt;Float&gt; y)</code></p>
+</li>
+        
+            <li><p><code>new Translate(Signal&lt;PVector&gt; position)</code></p>
+</li>
+        
+            <li><p><code>new Translate(float x, float y)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>style/Fill</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Fill(Signal&lt;Integer&gt; colorSignal)</code></p>
+</li>
+        
+            <li><p><code>new Fill(int someColor)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>style/Stroke</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new Stroke(Signal&lt;Integer&gt; colorSignal)</code></p>
+</li>
+        
+            <li><p><code>new Stroke(int someColor)</code></p>
+</li>
+        
+        </ul>
+      
+        <h2>style/StrokeWeight</h2>
+        
+
+        <ul>
+          
+            <li><p><code>new StrokeWeight(Signal&lt;Float&gt; weightsSignal)</code></p>
+</li>
+        
+            <li><p><code>new StrokeWeight(float someWeight)</code></p>
+</li>
+        
+        </ul>
+      
+    </div>
+
+    <footer>
+      <p>Generated 2016-12-24 07:19:03 -05:00</p>
+    </footer>
+  </body>
+</html>

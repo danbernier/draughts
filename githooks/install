@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp githooks/pre-commit .git/hooks/pre-commit

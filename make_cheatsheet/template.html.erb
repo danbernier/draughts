@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Cheatsheet: Draughts</title>
+    <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    footer, div#main {
+      margin: 0px;
+      padding: 20px 200px;
+    }
+
+    body {
+      color: #333;
+    }
+
+    * { font-size: 18pt; }
+    h3 { font-size: 21pt; }
+    h2 { font-size: 24pt; }
+    h1 { font-size: 30pt; }
+    footer {
+      background-color: #333;
+      color: #888;
+    }
+    </style>
+  </head>
+  <body>
+    <div id='main'>
+      <h1>Draughts</h1>
+
+      <p>A cheatsheet. <a href="https://github.com/danbernier/draughts">Get all the details.</a></p>
+
+      <% draughts.each do |draught| %>
+        <h2><%= draught.displayname %></h2>
+        <%= md(draught.comments) %>
+        <ul>
+          <% draught.constructor_signatures.each do |sig| %>
+            <li><%= md(sig) %></li>
+        <% end %>
+        </ul>
+      <% end %>
+    </div>
+
+    <footer>
+      <p>Generated <%= timestamp %></p>
+    </footer>
+  </body>
+</html>

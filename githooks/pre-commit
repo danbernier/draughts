@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+ruby make_cheatsheet/cheatsheet.rb
+git add cheatsheet.html
