@@ -3,20 +3,25 @@ package draughts;
 import signals.*;
 import processing.core.PApplet;
 
+/*cheat
+ * Draw a Draught around the edge of a circle, a given number of times. Radius
+ * defaults to 1, Phase defaults to 0.
+ */
+
 public class Circle implements Draught {
   private Draught drawCommand;
   private Signal<Float> radius = new Constant<Float>(1.0f);
   private Signal<Float> phase = new Constant<Float>(0.0f);
   private int n;
 
-  public Circle(int n, float rad, float phase, Draught dc) {
-    this(n, dc);
-    radius(rad);
+  public Circle(int times, float radius, float phase, Draught draught) {
+    this(times, draught);
+    radius(radius);
     phase(phase);
   }
-  public Circle(int n, Draught command) {
-    this.n = n;
-    this.drawCommand = command;
+  public Circle(int times, Draught draught) {
+    this.n = times;
+    this.drawCommand = draught;
   }
   public Circle radius(Signal<Float> r) {
     this.radius = r;

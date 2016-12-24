@@ -3,6 +3,13 @@ package draughts;
 import signals.*;
 import processing.core.PApplet;
 
+/*cheat
+ * Draw a Draught, a number of times, laid out along a sine wave.
+ *
+ * `amplitude` defaults to 1, `phase` defaults to 0. The `width` defaults to 10
+ * * n (it's weird, maybe we'll improve that).
+ */
+
 public class SineWave implements Draught {
   private Draught drawCommand;
   private float amp = 1;
@@ -10,15 +17,15 @@ public class SineWave implements Draught {
   private Signal<Float> phase = new signals.Constant<Float>(0.0f);
   private int n;
 
-  public SineWave(int n, float amp, float phase, float w, Draught dc) {
-    this(n, dc);
+  public SineWave(int n, float amp, float phase, float width, Draught draught) {
+    this(n, draught);
     amp(amp);
     phase(phase);
-    width(w);
+    width(width);
   }
-  public SineWave(int n, Draught command) {
+  public SineWave(int n, Draught draught) {
     this.n = n;
-    this.drawCommand = command;
+    this.drawCommand = draught;
   }
   public SineWave amp(float amp) {
     this.amp = amp;

@@ -4,15 +4,20 @@ import draughts.Draught;
 import signals.*;
 import processing.core.PApplet;
 
+/*cheat
+ * Set the current stroke-weight for the sketch. Accepts either a constant
+ * weight, or a `Signal<Float>` to vary the weight.
+ */
+
 public class StrokeWeight implements Draught {
-  Signal<Float> weightsSignal;
-  public StrokeWeight(Signal<Float> weightsSignal) {
-    this.weightsSignal = weightsSignal;
+  private Signal<Float> weightSignal;
+  public StrokeWeight(Signal<Float> weightSignal) {
+    this.weightSignal = weightSignal;
   }
-  public StrokeWeight(float someWeight) {
-    this(new Constant<Float>(someWeight));
+  public StrokeWeight(float constantWeight) {
+    this(new Constant<Float>(constantWeight));
   }
   public void draw(PApplet sketch) {
-    sketch.strokeWeight(weightsSignal.current());
+    sketch.strokeWeight(weightSignal.current());
   }
 }

@@ -3,6 +3,11 @@ package draughts;
 import signals.*;
 import processing.core.PApplet;
 
+/*cheat
+ * Draw an equilateral triangle, pointing up, with the baseline centered at (0,
+ * 0).
+ */
+
 public class EquilateralTriangle implements Draught {
   // height is sin(PI/3.0) * base width
   // Will be drawn w/ center at the middle of the baseline

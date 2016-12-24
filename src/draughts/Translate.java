@@ -4,6 +4,11 @@ import signals.*;
 import processing.core.PApplet;
 import processing.core.PVector;
 
+/*cheat
+ * Translate the coordinate system to the given position. Just like
+ * Processing's `translate` command.
+ */
+
 public class Translate implements Draught {
   Signal<PVector> position;
   public Translate(float x, float y) {
