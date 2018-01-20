@@ -1,14 +1,12 @@
-# Draughts
-
 A cheatsheet.
 [Get all the details.](https://github.com/danbernier/draughts)
 
 [draughts](draughts) | [signals](signals)
 
-## Package: signals
+# Package: signals
 
 
-### Amp
+## Amp
 
 
 <p>Amplify a signal by some <code>amount</code>.</p>
@@ -18,7 +16,7 @@ A cheatsheet.
 * `new Amp(float amount, Signal<Float> src)`
 
 
-### Color
+## Color
 
 
 <p>A signal of Colors, made by combining three Signals - one for red, one for
@@ -35,7 +33,7 @@ and the others should return 0..100.</p>
 * `new Color(PApplet sketch, Signal<Float> r, Signal<Float> g, Signal<Float> b)`
 
 
-### Constant
+## Constant
 
 
 <p>Always return a constant value. Mostly useful for places where a method
@@ -46,7 +44,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Constant(T val)`
 
 
-### Filter
+## Filter
 
 
 
@@ -55,7 +53,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Filter(Signal<T> src)`
 
 
-### HiPass
+## HiPass
 
 
 
@@ -64,7 +62,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new HiPass(float threshold, Signal<Float> src)`
 
 
-### LoPass
+## LoPass
 
 
 
@@ -73,7 +71,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new LoPass(float threshold, Signal<Float> src)`
 
 
-### Mouse
+## Mouse
 
 
 
@@ -82,7 +80,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Mouse(PApplet sketch)`
 
 
-### MouseX
+## MouseX
 
 
 
@@ -91,7 +89,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new MouseX(PApplet sketch)`
 
 
-### MouseY
+## MouseY
 
 
 
@@ -100,7 +98,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new MouseY(PApplet sketch)`
 
 
-### Osc
+## Osc
 
 
 
@@ -109,7 +107,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Osc(float period)`
 
 
-### PVectorSignal
+## PVectorSignal
 
 
 
@@ -118,7 +116,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new PVectorSignal(Signal<Float> x, Signal<Float> y)`
 
 
-### RandomSignal
+## RandomSignal
 
 
 
@@ -129,7 +127,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new RandomSignal(float min, float max)`
 
 
-### Ring
+## Ring
 
 
 
@@ -138,7 +136,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Ring(T... items)`
 
 
-### Shift
+## Shift
 
 
 
@@ -147,14 +145,14 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Shift(float amount, Signal<Float> src)`
 
 
-### Signal
+## Signal
 
 
 
 
 
 
-### SignalLock
+## SignalLock
 
 
 
@@ -163,7 +161,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new SignalLock(Signal<T> src)`
 
 
-### Speed
+## Speed
 
 
 
@@ -172,7 +170,7 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Speed(float ratePerSecond)`
 
 
-### Threshold
+## Threshold
 
 
 
@@ -184,4 +182,4 @@ expects a Signal, and you really only want to give it a number.</p>
 
 ---------------
 
-Generated 2018-01-20 17:22:29 -05:00
+Generated 2018-01-20 17:28:03 -05:00

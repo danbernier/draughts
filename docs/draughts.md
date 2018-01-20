@@ -1,14 +1,12 @@
-# Draughts
-
 A cheatsheet.
 [Get all the details.](https://github.com/danbernier/draughts)
 
 [draughts](draughts) | [signals](signals)
 
-## Package: draughts
+# Package: draughts
 
 
-### Chain
+## Chain
 
 
 <p>Draws a list of Draughts together, in order. Useful for when a Draught
@@ -20,7 +18,7 @@ SineWave, for example).</p>
 * `new Chain(Draught... draughts)`
 
 
-### Circle
+## Circle
 
 
 <p>Draw a Draught around the edge of a circle, a given number of times. Radius
@@ -33,7 +31,7 @@ defaults to 1, Phase defaults to 0.</p>
 * `new Circle(int times, float radius, float phase, Draught draught)`
 
 
-### DrawRect
+## DrawRect
 
 
 <p>Draw a rectangle at (0, 0), with the given width and height.</p>
@@ -45,7 +43,7 @@ defaults to 1, Phase defaults to 0.</p>
 * `new DrawRect(float width, float height)`
 
 
-### DrawText
+## DrawText
 
 
 <p>Draw a string of text at (0, 0), with the current fill color, font, text
@@ -56,7 +54,7 @@ alignment, etc.</p>
 * `new DrawText(String text)`
 
 
-### EquilateralTriangle
+## EquilateralTriangle
 
 
 <p>Draw an equilateral triangle, pointing up, with the baseline centered at (0,
@@ -69,7 +67,7 @@ alignment, etc.</p>
 * `new EquilateralTriangle(float baseWidth)`
 
 
-### HexGrid
+## HexGrid
 
 
 <p>Draw a Draught repeatedly on a hexagonal grid. You control the width and
@@ -81,7 +79,7 @@ between the center of two neighboring hexagons).</p>
 * `new HexGrid(float gridWidth, float gridHeight, float cellSize, Draught draught)`
 
 
-### LineUp
+## LineUp
 
 
 <p>Draw a line, upwards, from (0, 0) to (0, -length).</p>
@@ -93,7 +91,7 @@ between the center of two neighboring hexagons).</p>
 * `new LineUp(float length)`
 
 
-### Maybe
+## Maybe
 
 
 <p>Draw a Draught, but only some percentage of the time.</p>
@@ -103,7 +101,7 @@ between the center of two neighboring hexagons).</p>
 * `new Maybe(float probability, Draught draught)`
 
 
-### PushMatrix
+## PushMatrix
 
 
 <p>Push a new matrix onto the stack, draw the draughts, then pop the matrix
@@ -114,7 +112,7 @@ stack.</p>
 * `new PushMatrix(Draught... draughts)`
 
 
-### Repeat
+## Repeat
 
 
 <p>Repeats a list of Draughts a given number of times. E.g. <code>new Repeat(3, A,
@@ -125,7 +123,7 @@ B)</code> would draw: A, B, A, B, A, B.</p>
 * `new Repeat(int times, Draught... draughts)`
 
 
-### Rotate
+## Rotate
 
 
 
@@ -136,7 +134,7 @@ B)</code> would draw: A, B, A, B, A, B.</p>
 * `new Rotate(float theta)`
 
 
-### Scale
+## Scale
 
 
 
@@ -145,7 +143,7 @@ B)</code> would draw: A, B, A, B, A, B.</p>
 * `new Scale(float amount)`
 
 
-### SineWave
+## SineWave
 
 
 <p>Draw a Draught, a number of times, laid out along a sine wave.</p>
@@ -160,7 +158,7 @@ B)</code> would draw: A, B, A, B, A, B.</p>
 * `new SineWave(int n, float amp, float phase, float width, Draught draught)`
 
 
-### Translate
+## Translate
 
 
 <p>Translate the coordinate system to the given position. Just like
@@ -175,7 +173,7 @@ Processing’s <code>translate</code> command.</p>
 * `new Translate(float x, float y)`
 
 
-### style/Fill
+## style/Fill
 
 
 <p>Set the current fill color for the sketch. Accepts either a constant color,
@@ -190,7 +188,7 @@ integers</a>.</p>
 * `new Fill(int constantColor)`
 
 
-### style/Stroke
+## style/Stroke
 
 
 <p>Set the current stroke color for the sketch. Accepts either a constant
@@ -205,7 +203,7 @@ integers</a>.</p>
 * `new Stroke(int constantColor)`
 
 
-### style/StrokeWeight
+## style/StrokeWeight
 
 
 <p>Set the current stroke-weight for the sketch. Accepts either a constant
@@ -221,4 +219,4 @@ weight, or a <code>Signal&lt;Float&gt;</code> to vary the weight.</p>
 
 ---------------
 
-Generated 2018-01-20 17:22:29 -05:00
+Generated 2018-01-20 17:28:03 -05:00
