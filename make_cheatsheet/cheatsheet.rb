@@ -70,6 +70,7 @@ class PackageRenderer
 
   def files(package_name)
     matching_class_name = package_name[0..-2].capitalize
+    # TODO: filter out src/Filter.java. Maybe, all abstract classes & interfaces?
     Dir.glob("src/#{package_name}/**/*.java") - ["src/draughts/#{matching_class_name}.java"]
   end
 end
