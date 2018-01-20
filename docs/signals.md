@@ -11,6 +11,7 @@ A cheatsheet.
 ### Amp
 
 
+<p>Amplifies a signal by some <code>amount</code>.</p>
 
 
 
@@ -173,4 +174,4 @@ A cheatsheet.
 
 ---------------
 
-Generated 2018-01-20 17:11:22 -05:00
+Generated 2018-01-20 17:16:18 -05:00
