@@ -44,15 +44,6 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Constant(T val)`
 
 
-## Filter
-
-
-
-
-
-* `new Filter(Signal<T> src)`
-
-
 ## HiPass
 
 
@@ -145,13 +136,6 @@ expects a Signal, and you really only want to give it a number.</p>
 * `new Shift(float amount, Signal<Float> src)`
 
 
-## Signal
-
-
-
-
-
-
 ## SignalLock
 
 
@@ -182,4 +166,4 @@ expects a Signal, and you really only want to give it a number.</p>
 
 ---------------
 
-Generated 2018-01-20 17:28:03 -05:00
+Generated 2018-01-20 17:32:46 -05:00

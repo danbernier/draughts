@@ -24,6 +24,12 @@ class JavaClass
       format_constructor_signature(sig, classname)
     }.sort
     @comments = scrub_comments(src.scan(/\/\*cheat(.*?)\*\//m).flatten.join(''))
+
+    @abstract = detect_is_abstract(src)
+  end
+
+  def abstract?
+    @abstract
   end
 
   private
@@ -38,6 +44,10 @@ class JavaClass
 
   def scrub_comments(comments)
     comments.split(/^\s*\*/).map(&:strip).join("\n")
+  end
+
+  def detect_is_abstract(src)
+    src.include?('abstract class') || src.include?('public interface')
   end
 end
 
@@ -63,15 +73,13 @@ class PackageRenderer
   end
 
   def java_classes
-    files(@package_name).sort.map { |file| JavaClass.new(file) }
+    files(@package_name).sort.map { |file| JavaClass.new(file) }.reject(&:abstract?)
   end
 
   private
 
   def files(package_name)
-    matching_class_name = package_name[0..-2].capitalize
-    # TODO: filter out src/Filter.java. Maybe, all abstract classes & interfaces?
-    Dir.glob("src/#{package_name}/**/*.java") - ["src/draughts/#{matching_class_name}.java"]
+    Dir.glob("src/#{package_name}/**/*.java")
   end
 end
 
