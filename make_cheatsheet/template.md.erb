@@ -3,12 +3,16 @@
 A cheatsheet.
 [Get all the details.](https://github.com/danbernier/draughts)
 
-<% draughts.each do |draught| %>
-## <%= draught.displayname %>
+<%= package_menu %>
 
-<%= md(draught.comments) %>
+## Package: <%= package %>
 
-<% draught.constructor_signatures.map do |sig| %>
+<% java_classes.each do |java_class| %>
+### <%= java_class.displayname %>
+
+<%= md(java_class.comments) %>
+
+<% java_class.constructor_signatures.map do |sig| %>
 * <%= sig %>
 <% end %>
 <% end %>
