@@ -1,0 +1,18 @@
+# Draughts
+
+A cheatsheet.
+[Get all the details.](https://github.com/danbernier/draughts)
+
+<% draughts.each do |draught| %>
+## <%= draught.displayname %>
+
+<%= md(draught.comments) %>
+
+<% draught.constructor_signatures.map do |sig| %>
+* <%= sig %>
+<% end %>
+<% end %>
+
+---------------
+
+Generated <%= timestamp %>

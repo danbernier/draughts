@@ -59,6 +59,10 @@ class CheatsheetMaker
   end
 end
 
+
+
+
+
 filename = 'make_cheatsheet/template.html.erb'
 template = ERB.new(File.read(filename))
 template.filename = filename
@@ -66,6 +70,25 @@ template.filename = filename
 # Strange: give CsM a #render, so a CsM instance is the binding:
 template.def_method(CheatsheetMaker, 'render')
 
-File.open('cheatsheet.html', 'w') do |f|
+File.open('docs/cheatsheet.html', 'w') do |f|
   f.puts CheatsheetMaker.new.render
 end
+
+
+
+filename = 'make_cheatsheet/template.md.erb'
+template = ERB.new(File.read(filename))
+template.filename = filename
+
+# Strange: give CsM a #render, so a CsM instance is the binding:
+template.def_method(CheatsheetMaker, 'render')
+
+File.open('docs/cheatsheet.md', 'w') do |f|
+  f.puts CheatsheetMaker.new.render
+end
+
+# This might be a better? way? to make html?
+# md = File.read('cheatsheet.md')
+# File.open('cheatsheet-hot.html', 'w') do |f|
+#   f.puts Kramdown::Document.new(md).to_html
+# end
