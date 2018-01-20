@@ -11,7 +11,7 @@ A cheatsheet.
 ### Amp
 
 
-<p>Amplifies a signal by some <code>amount</code>.</p>
+<p>Amplify a signal by some <code>amount</code>.</p>
 
 
 
@@ -21,6 +21,14 @@ A cheatsheet.
 ### Color
 
 
+<p>A signal of Colors, made by combining three Signals - one for red, one for
+green, one for blue - into a Processing color.</p>
+
+<p>The signals don’t have to actually be RGB; if the Processing sketch is in
+HSB, that’s how to think of these. The signals should return values in the
+range that’s acceptable to Processing’s <code>color</code> function. If you’ve set
+<code>colorMode(HSB, 360, 100, 100)</code>, then the first signal should return 0..360,
+and the others should return 0..100.</p>
 
 
 
@@ -30,6 +38,8 @@ A cheatsheet.
 ### Constant
 
 
+<p>Always return a constant value. Mostly useful for places where a method
+expects a Signal, and you really only want to give it a number.</p>
 
 
 
@@ -174,4 +184,4 @@ A cheatsheet.
 
 ---------------
 
-Generated 2018-01-20 17:16:18 -05:00
+Generated 2018-01-20 17:22:29 -05:00

@@ -1,7 +1,7 @@
 package signals;
 
 /*cheat
- * Amplifies a signal by some `amount`.
+ * Amplify a signal by some `amount`.
  */
 
 public class Amp extends Filter<Float> {
