@@ -47,6 +47,11 @@ expects a Signal, and you really only want to give it a number.</p>
 ## HiPass
 
 
+<p>Basic <a href="https://en.wikipedia.org/wiki/High-pass_filter">High-pass filter</a>.
+Emits a value if it’s over the <code>threshold</code>; if it’s under the threshold,
+returns the threshold value.</p>
+
+<p>See LoPass.</p>
 
 
 
@@ -56,6 +61,11 @@ expects a Signal, and you really only want to give it a number.</p>
 ## LoPass
 
 
+<p>Basic <a href="https://en.wikipedia.org/wiki/Low-pass_filter">Low-pass filter</a>.
+Emits a value if it’s under the <code>threshold</code>; if it’s over the threshold,
+returns the threshold value.</p>
+
+<p>See HiPass.</p>
 
 
 
@@ -65,6 +75,10 @@ expects a Signal, and you really only want to give it a number.</p>
 ## Mouse
 
 
+<p>A signal that emits PVectors pointing to the mouse’s current position.
+Based on Processing’s <code>mouseX</code> and <code>mouseY</code> values.</p>
+
+<p>See MouseX and MouseY.</p>
 
 
 
@@ -74,6 +88,10 @@ expects a Signal, and you really only want to give it a number.</p>
 ## MouseX
 
 
+<p>A signal that emits float values pointing to the mouse’s current horizontal
+position.  Based on Processing’s <code>mouseX</code> value.</p>
+
+<p>See Mouse and MouseY.</p>
 
 
 
@@ -83,6 +101,10 @@ expects a Signal, and you really only want to give it a number.</p>
 ## MouseY
 
 
+<p>A signal that emits float values pointing to the mouse’s current vertical
+position.  Based on Processing’s <code>mouseY</code> value.</p>
+
+<p>See Mouse and MouseX.</p>
 
 
 
@@ -92,6 +114,12 @@ expects a Signal, and you really only want to give it a number.</p>
 ## Osc
 
 
+<p>An oscillator signal.</p>
+
+<p>It’s constructed with a <code>period</code>, and supports a <a href="https://stackoverflow.com/questions/17937755/what-is-the-difference-between-a-fluent-interface-and-the-builder-pattern">fluent builder
+interface</a>
+for specifying amplitude, phase, and offset (basically, translating the
+signal up or down - it’s the last thing added to the signal value).</p>
 
 
 
@@ -101,6 +129,7 @@ expects a Signal, and you really only want to give it a number.</p>
 ## PVectorSignal
 
 
+<p>A Signal that ties two Signals together into a PVector.</p>
 
 
 
@@ -110,6 +139,8 @@ expects a Signal, and you really only want to give it a number.</p>
 ## RandomSignal
 
 
+<p>Returns a stream of random values between 0 and 1. Implemented via Java’s
+<code>Random#nextFloat</code>.</p>
 
 
 
@@ -121,6 +152,11 @@ expects a Signal, and you really only want to give it a number.</p>
 ## Ring
 
 
+<p>AKA Cycle. The term “Ring” comes from SonicPi. You give it items, and it
+cycles through them.</p>
+
+<p><code>new Ring(1, 2)</code> would emit: 1, 2, 1, 2, 1, 2…
+<code>new Ring(7, 8, 9)</code> would emit: 7, 8, 9, 7, 8, 9…</p>
 
 
 
@@ -130,6 +166,8 @@ expects a Signal, and you really only want to give it a number.</p>
 ## Shift
 
 
+<p>Shift a signal, additively, by the given <code>amount</code>. Or, add <code>amount</code> to
+each value from the source signal.</p>
 
 
 
@@ -139,6 +177,17 @@ expects a Signal, and you really only want to give it a number.</p>
 ## SignalLock
 
 
+<p>A Signal Adapter that can “lock” the source signal to a certain value; it’ll
+return the first value it gets from the source signal, regardless of what
+the underlying signal returns (in fact, it won’t even call the underlying
+signal).</p>
+
+<p>You can <code>unlock</code> the SignalLock, and it’ll call the source signal again, and
+then auto-lock to that new value.</p>
+
+<p>This is most useful if you’re using a source signal in (say) a Repeat
+draught, and want to use the same value for each iteration, but on the next
+frame, advance the source signal.</p>
 
 
 
@@ -148,6 +197,9 @@ expects a Signal, and you really only want to give it a number.</p>
 ## Speed
 
 
+<p>Start at zero, and increment the value at the given rate-per-second. A
+<code>Speed</code> at 2 would, after one second, return 0.5, and after two seconds,
+return 1, etc.</p>
 
 
 
@@ -157,6 +209,10 @@ expects a Signal, and you really only want to give it a number.</p>
 ## Threshold
 
 
+<p>Turn an <code>Osc</code> into a stream of booleans, based on whether the oscillator’s
+value is greater than zero.</p>
+
+<p>(This one is, admittedly, kind of odd, kind of specific.)</p>
 
 
 
@@ -166,4 +222,4 @@ expects a Signal, and you really only want to give it a number.</p>
 
 ---------------
 
-Generated 2018-01-20 17:32:46 -05:00
+Generated 2018-01-20 17:56:48 -05:00

@@ -2,6 +2,10 @@ package signals;
 
 import processing.core.PVector;
 
+/*cheat
+ * A Signal that ties two Signals together into a PVector.
+ */
+
 public class PVectorSignal implements Signal<PVector> {
   private Signal<Float> x;
   private Signal<Float> y;

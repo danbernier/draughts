@@ -1,5 +1,14 @@
 package signals;
 
+/*cheat
+ * An oscillator signal.
+ *
+ * It's constructed with a `period`, and supports a [fluent builder
+ * interface](https://stackoverflow.com/questions/17937755/what-is-the-difference-between-a-fluent-interface-and-the-builder-pattern)
+ * for specifying amplitude, phase, and offset (basically, translating the
+ * signal up or down - it's the last thing added to the signal value).
+ */
+
 public class Osc implements Signal<Float> {
   float period;
   float amp = 1;

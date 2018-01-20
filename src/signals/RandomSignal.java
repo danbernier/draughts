@@ -2,6 +2,15 @@ package signals;
 
 import java.util.Random;
 
+/*cheat
+ * Returns a stream of random values between 0 and 1. Implemented via Java's
+ * `Random#nextFloat`.
+ */
+
+/**
+ * TODO: Gaussian?
+ */
+
 public class RandomSignal implements Signal<Float> {
   private float min;
   private float max;
