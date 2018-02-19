@@ -281,4 +281,4 @@ weight, or a <code>Signal&lt;Float&gt;</code> to vary the weight.</p>
 
 ---------------
 
-Generated 2018-02-19 12:06:52 -05:00
+Generated 2018-02-19 12:26:07 -05:00

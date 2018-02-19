@@ -72,6 +72,18 @@ returns the threshold value.</p>
 * `new LoPass(float threshold, Signal<Float> src)`
 
 
+## Map
+
+
+<p>Map (by linear interpolation) a value from one range to another. This is
+stolen shamelessly, with love, from Processing’s incredibly versatile <code>map</code>
+function.</p>
+
+
+
+* `new Map(Signal src, float srcMin, float srcMax, float outMin, float outMax)`
+
+
 ## Mouse
 
 
@@ -235,4 +247,4 @@ value is greater than zero.</p>
 
 ---------------
 
-Generated 2018-02-19 12:06:52 -05:00
+Generated 2018-02-19 12:26:07 -05:00
