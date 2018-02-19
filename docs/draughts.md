@@ -40,7 +40,13 @@ defaults to 1, Phase defaults to 0.</p>
 
 * `new DrawRect(Signal<Float> width, Signal<Float> height)`
 
+* `new DrawRect(Signal<Float> x, Signal<Float> y, Signal<Float> width, Signal<Float> height)`
+
 * `new DrawRect(float width, float height)`
+
+* `new DrawRect(float x, float y, Signal<Float> width, Signal<Float> height)`
+
+* `new DrawRect(float x, float y, float width, float height)`
 
 
 ## DrawText
@@ -79,6 +85,22 @@ between the center of two neighboring hexagons).</p>
 * `new HexGrid(float gridWidth, float gridHeight, float cellSize, Draught draught)`
 
 
+## HorizontalMirror
+
+
+<p>Draw some draughts, then flip horizontally, and draw it again, reversed
+left-to-right. The repeated image is flipped horizontally.</p>
+
+<p>NB: if the image moves beyond the reflection point, it won’t be cut-off.
+This may be surprising, but hey, it can produce some neat effects.</p>
+
+<p>See also: VerticalMirror.</p>
+
+
+
+* `new HorizontalMirror(Draught... draughts)`
+
+
 ## LineUp
 
 
@@ -101,6 +123,19 @@ between the center of two neighboring hexagons).</p>
 * `new Maybe(float probability, Draught draught)`
 
 
+## Push
+
+
+<p>A combination of PushMatrix and PushStyle. Hat-tip to p5js.</p>
+
+<p>Push a new matrix onto the matrix stack and a new style onto the style
+stack, draw the draughts, then pop the matrix stack and style stack.</p>
+
+
+
+* `new Push(Draught... draughts)`
+
+
 ## PushMatrix
 
 
@@ -110,6 +145,17 @@ stack.</p>
 
 
 * `new PushMatrix(Draught... draughts)`
+
+
+## PushStyle
+
+
+<p>Push a new style onto the style stack, draw the draughts, then pop the
+style stack.</p>
+
+
+
+* `new PushStyle(Draught... draughts)`
 
 
 ## Repeat
@@ -173,6 +219,22 @@ Processing’s <code>translate</code> command.</p>
 * `new Translate(float x, float y)`
 
 
+## VerticalMirror
+
+
+<p>Draw some draughts, then flip vertically, and draw it again, upside-down.
+The repeated image is flipped vertically.</p>
+
+<p>NB: if the image falls below the “horizon”, it won’t be cut-off. This may be
+surprising, but hey, it can produce some neat effects.</p>
+
+<p>See also: HorizontalMirror.</p>
+
+
+
+* `new VerticalMirror(Draught... draughts)`
+
+
 ## style/Fill
 
 
@@ -219,4 +281,4 @@ weight, or a <code>Signal&lt;Float&gt;</code> to vary the weight.</p>
 
 ---------------
 
-Generated 2018-01-20 17:56:48 -05:00
+Generated 2018-02-19 12:06:52 -05:00

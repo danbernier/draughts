@@ -136,6 +136,19 @@ signal up or down - it’s the last thing added to the signal value).</p>
 * `new PVectorSignal(Signal<Float> x, Signal<Float> y)`
 
 
+## RandomGraphWalk
+
+
+<p>Returns a stream of random values between 0 and 1. Implemented via Java’s
+<code>Random#nextFloat</code>.</p>
+
+
+
+* `new RandomGraphWalk()`
+
+* `new RandomGraphWalk(HashMap<T, HashSet<T>> graph)`
+
+
 ## RandomSignal
 
 
@@ -222,4 +235,4 @@ value is greater than zero.</p>
 
 ---------------
 
-Generated 2018-01-20 17:56:48 -05:00
+Generated 2018-02-19 12:06:52 -05:00
