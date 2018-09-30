@@ -133,6 +133,18 @@ interface</a>
 for specifying amplitude, phase, and offset (basically, translating the
 signal up or down - it’s the last thing added to the signal value).</p>
 
+<p>Examples:</p>
+
+<p><code>
+Signal osc = new Osc(1).amp(200).phase(3).offset(11);
+</code></p>
+
+<p>…though tbh if you want to use <code>amp</code> or <code>offset</code>, I’d suggest using this, to rely on fewer weird parts, and more standard parts:</p>
+
+<p><code>
+Signal osc = new Shift(11, new Amp(200, new Osc(1).phase(3)));
+</code></p>
+
 
 
 * `new Osc(float period)`
@@ -247,4 +259,4 @@ value is greater than zero.</p>
 
 ---------------
 
-Generated 2018-02-19 12:26:07 -05:00
+Generated 2018-09-29 22:03:48 -05:00

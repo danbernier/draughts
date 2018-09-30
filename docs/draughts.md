@@ -26,9 +26,27 @@ defaults to 1, Phase defaults to 0.</p>
 
 
 
-* `new Circle(int times, Draught draught)`
+* `new Circle(int times, Draught... draughts)`
 
-* `new Circle(int times, float radius, float phase, Draught draught)`
+* `new Circle(int times, float radius, float phase, Draught... draughts)`
+
+
+## DrawEllipse
+
+
+<p>Draw an ellipse at (x, y) (defaults to (0, 0)), with the given width and height.</p>
+
+
+
+* `new DrawEllipse(Signal<Float> width, Signal<Float> height)`
+
+* `new DrawEllipse(Signal<Float> x, Signal<Float> y, Signal<Float> width, Signal<Float> height)`
+
+* `new DrawEllipse(float width, float height)`
+
+* `new DrawEllipse(float x, float y, Signal<Float> width, Signal<Float> height)`
+
+* `new DrawEllipse(float x, float y, float width, float height)`
 
 
 ## DrawRect
@@ -214,6 +232,8 @@ Processing’s <code>translate</code> command.</p>
 
 * `new Translate(Signal<Float> x, Signal<Float> y)`
 
+* `new Translate(Signal<Float> x, Signal<Float> y)`
+
 * `new Translate(Signal<PVector> position)`
 
 * `new Translate(float x, float y)`
@@ -250,6 +270,26 @@ integers</a>.</p>
 * `new Fill(int constantColor)`
 
 
+## style/NoFill
+
+
+<p>Turns off filling for shapes. Processing’s <code>noFill</code>.</p>
+
+
+
+* `new NoFill()`
+
+
+## style/NoStroke
+
+
+<p>Turns off stroking for shapes. Processing’s <code>noStroke</code>.</p>
+
+
+
+* `new NoStroke()`
+
+
 ## style/Stroke
 
 
@@ -281,4 +321,4 @@ weight, or a <code>Signal&lt;Float&gt;</code> to vary the weight.</p>
 
 ---------------
 
-Generated 2018-02-19 12:26:07 -05:00
+Generated 2018-09-29 22:03:48 -05:00
