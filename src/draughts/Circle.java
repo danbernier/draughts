@@ -9,19 +9,19 @@ import processing.core.PApplet;
  */
 
 public class Circle implements Draught {
-  private Draught drawCommand;
+  private Draught[] drawCommands;
   private Signal<Float> radius = new Constant<Float>(1.0f);
   private Signal<Float> phase = new Constant<Float>(0.0f);
   private int n;
 
-  public Circle(int times, float radius, float phase, Draught draught) {
-    this(times, draught);
+  public Circle(int times, float radius, float phase, Draught... draughts) {
+    this(times, draughts);
     radius(radius);
     phase(phase);
   }
-  public Circle(int times, Draught draught) {
+  public Circle(int times, Draught... draughts) {
     this.n = times;
-    this.drawCommand = draught;
+    this.drawCommands = draughts;
   }
   public Circle radius(Signal<Float> r) {
     this.radius = r;
@@ -46,7 +46,9 @@ public class Circle implements Draught {
       sketch.rotate((float)theta);
       sketch.pushMatrix();
       sketch.translate(rad, 0);
-      drawCommand.draw(sketch);
+      for (Draught drawCommand : drawCommands) {
+        drawCommand.draw(sketch);
+      }
       sketch.popMatrix();
     }
     sketch.popMatrix();
