@@ -9,16 +9,16 @@ import processing.core.PApplet;
  */
 
 public class HexGrid implements Draught {
-  private Draught draught;
+  private Draught[] draughts;
   private double gridWidth;
   private double gridHeight;
   private double cellSize;  // size between 2 points
 
-  public HexGrid(float gridWidth, float gridHeight, float cellSize, Draught draught) {
+  public HexGrid(float gridWidth, float gridHeight, float cellSize, Draught... draughts) {
     this.gridWidth = (double)gridWidth;
     this.gridHeight = (double)gridHeight;
     this.cellSize = (double)cellSize;
-    this.draught = draught;
+    this.draughts = draughts;
   }
 
   public void draw(PApplet sketch) {
@@ -35,7 +35,9 @@ public class HexGrid implements Draught {
       for (int j = 0; j < (offset ? cols - 1 : cols); j++) {
         sketch.pushMatrix();
         sketch.translate((float)((offset ? xOff : 0) + x), (float)y);
-        draught.draw(sketch);
+        for (Draught draught : draughts) {
+          draught.draw(sketch);
+        }
         sketch.popMatrix();
         x += cellSize;
       }

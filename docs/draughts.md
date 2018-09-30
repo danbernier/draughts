@@ -100,7 +100,7 @@ between the center of two neighboring hexagons).</p>
 
 
 
-* `new HexGrid(float gridWidth, float gridHeight, float cellSize, Draught draught)`
+* `new HexGrid(float gridWidth, float gridHeight, float cellSize, Draught... draughts)`
 
 
 ## HorizontalMirror
@@ -321,4 +321,4 @@ weight, or a <code>Signal&lt;Float&gt;</code> to vary the weight.</p>
 
 ---------------
 
-Generated 2018-09-29 22:03:48 -05:00
+Generated 2018-09-29 22:27:05 -05:00
